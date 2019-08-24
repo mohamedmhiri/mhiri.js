@@ -8,24 +8,11 @@ const menuElement = document.querySelector('ul');
 
 menuElement.addEventListener('click', evt => {
   evt.preventDefault();
-
-  /*let value = inputElement.value.trim();
-
-  if(value.length) {
-    store.dispatch('addItem', value);
-    inputElement.value = '';
-    inputElement.focus();
-  }
-  */
   store.dispatch('navigate', { href: evt.target.innerHTML });
-
+  import(`./components/${evt.target.innerHTML}.js`)
+    .then(({ default: component }) => {
+      const _component = new component();
+      _component.render();
+    }
+    );
 });
-/*
-const countInstance = new Count();
-const listInstance = new List();
-const statusInstance = new Status();
-
-countInstance.render();
-listInstance.render();
-statusInstance.render();
-*/
