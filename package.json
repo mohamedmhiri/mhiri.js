@@ -2,8 +2,9 @@
   "name": "mhiri.js",
   "version": "1.0.0",
   "description": "simple js framework",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
+    "start": "webpack-dev-server --mode development --hot --open --host 0.0.0.0 --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
