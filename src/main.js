@@ -1,9 +1,5 @@
 import store from './store/index.js';
 
-import Count from './components/count.js';
-import List from './components/list.js';
-import Status from './components/status.js';
-
 const menuElement = document.querySelector('ul');
 
 menuElement.addEventListener('click', evt => {
