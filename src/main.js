@@ -1,24 +1,26 @@
-import store from './store/index.js'; 
+import store from './store/index.js';
 
 import Count from './components/count.js';
 import List from './components/list.js';
 import Status from './components/status.js';
 
-const formElement = document.querySelector('.js-form');
-const inputElement = document.querySelector('#new-item-field');
+const menuElement = document.querySelector('ul');
 
-formElement.addEventListener('submit', evt => {
+menuElement.addEventListener('click', evt => {
   evt.preventDefault();
 
-  let value = inputElement.value.trim();
+  /*let value = inputElement.value.trim();
 
   if(value.length) {
     store.dispatch('addItem', value);
     inputElement.value = '';
     inputElement.focus();
   }
-});
+  */
+  store.dispatch('navigate', { href: evt.target.innerHTML });
 
+});
+/*
 const countInstance = new Count();
 const listInstance = new List();
 const statusInstance = new Status();
@@ -26,3 +28,4 @@ const statusInstance = new Status();
 countInstance.render();
 listInstance.render();
 statusInstance.render();
+*/

@@ -1,8 +1,5 @@
 export default {
-  addItem(context, payload) {
-    context.commit('addItem', payload);
+  navigate(context, payload) {
+    context.commit('navigate', payload);
   },
-  clearItem(context, payload) {
-    context.commit('clearItem', payload);
-  }
 };
