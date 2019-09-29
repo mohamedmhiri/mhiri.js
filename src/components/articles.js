@@ -12,6 +12,7 @@ export default class Articles extends Component {
   render() {
 
     this.element.innerHTML = `
+    <button id="add">Click</button>
     <table style="width:100%">
       <tr>
         <th>Firstname</th>
@@ -30,5 +31,10 @@ export default class Articles extends Component {
       </tr>
     </table>
     `.trim();
+
+    const add = document.querySelector('#add');
+    add.addEventListener('click', evt => {
+      
+    })
   }
 }
